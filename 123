@@ -1,0 +1,107 @@
+Ponto e vírgula (;):
+Exemplo em JavaScript:
+
+javascript
+Copy code
+var x = 10;
+var y = 20;
+var z = x + y;
+console.log(z); // Output: 30
+Neste exemplo, o ponto e vírgula é usado para indicar o fim de cada instrução.
+
+Parênteses (( )):
+Exemplo em Python:
+
+python
+Copy code
+def soma(a, b):
+  return (a + b)
+
+x = 5
+y = 10
+z = soma(x, y)
+print(z) # Output: 15
+Neste exemplo, os parênteses são usados para agrupar os argumentos da função "soma" e para indicar a ordem de execução das operações.
+
+Chaves ({ }):
+Exemplo em Java:
+
+csharp
+Copy code
+public class Exemplo {
+  public static void main(String[] args) {
+    int x = 10;
+    if (x > 5) {
+      System.out.println("x é maior que 5");
+    } else {
+      System.out.println("x é menor ou igual a 5");
+    }
+  }
+}
+Neste exemplo, as chaves são usadas para delimitar o bloco de código que será executado se a condição do "if" for verdadeira ou falsa.
+
+Colchetes ([ ]):
+Exemplo em Python:
+
+scss
+Copy code
+nomes = ["João", "Maria", "Pedro"]
+print(nomes[1]) # Output: Maria
+Neste exemplo, os colchetes são usados para acessar o segundo elemento da lista "nomes".
+
+Operadores aritméticos (+, -, *, /):
+Exemplo em C++:
+
+c
+Copy code
+int x = 5;
+int y = 2;
+int z = x * y;
+cout << z; // Output: 10
+Neste exemplo, o operador de multiplicação é usado para multiplicar os valores das variáveis "x" e "y" e armazenar o resultado na variável "z".
+
+Operadores lógicos (&&, ||, !):
+Exemplo em JavaScript:
+
+javascript
+Copy code
+var x = 10;
+var y = 5;
+if (x > 5 && y < 10) {
+  console.log("x é maior que 5 e y é menor que 10");
+}
+Neste exemplo, o operador "e" lógico é usado para verificar se as duas condições são verdadeiras.
+
+Igualdade e desigualdade (==, !=):
+Exemplo em Python:
+
+bash
+Copy code
+x = 5
+y = 10
+if x == y:
+  print("x é igual a y")
+else:
+  print("x é diferente de y")
+Neste exemplo, o operador de igualdade é usado para verificar se as duas variáveis são iguais.
+
+Aspas (“ ”):
+Exemplo em Java:
+
+arduino
+Copy code
+String nome = "João";
+System.out.println("Olá, " + nome); // Output: Olá, João
+Neste exemplo, as aspas são usadas para indicar que o texto "João" deve ser interpretado como uma string.
+
+Ponto (.) :
+Exemplo em JavaScript:
+
+javascript
+Copy code
+var pessoa = {
+  nome: "João",
+  idade: 30,
+  saudacao: function() {
+    console.log("Olá, meu nome é " + this.nome);
+ 
