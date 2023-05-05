@@ -10,7 +10,40 @@ shoppingCart.addEventListener('click', function() {
   shoppingCartContent.style.display = shoppingCartContent.style.display === 'block' ? 'none' : 'block';
 });
 
-//função que chama o carrinho
+// Adiciona 1 ao contador de itens no carrinho ao clicar em um botão "Adicionar ao carrinho"
+let count = 0;
+
+function updateCartCountOnClick() {
+  count++;
+  document.querySelector('.badge').innerHTML = count;
+}
+
+document.querySelectorAll('.button').forEach(function(button) {
+  button.addEventListener('click', updateCartCountOnClick);
+});
+
+// Adiciona item à lista do carrinho e atualiza o contador e a lista de itens do carrinho
+let cart = [];
+
+function addToCartList(item) {
+  cart.push(item);
+  updateCartCount();
+  updateCartList();
+}
+
+function updateCartCount() {
+  document.querySelector('.badge').innerHTML = cart.length;
+}
+
+function updateCartList() {
+  let list = '';
+  for (let item of cart) {
+    list += '<li>' + item + '</li>';
+  }
+  document.querySelector('.shopping-cart-list').innerHTML = list;
+}
+
+/* //função que chama o carrinho
 let count = 0;
 
 function addToCart() {
@@ -42,7 +75,7 @@ function updateCartList() {
   }
   document.querySelector('.shopping-cart-list').innerHTML = list;
 }
-
+*/
 /*document.querySelector('button').addEventListener('click', function() {
     addToCart('Air Force');
   });*/
@@ -54,7 +87,7 @@ function updateCartList() {
   }
   
   let totalAmount = '0,00';
-  
+
   function ready() {
     // Botão remover produto
     const removeCartProductButtons = document.getElementsByClassName('remove-product-button');
@@ -185,14 +218,27 @@ for (let i = 0; i < removeCartProductButtons.length; i++) {
 
 // abaProdutos
 
-const relatedProductsBtn = document.querySelector('#related-products-btn');
-const relatedProductsModal = document.querySelector('#related-products-modal');
-const closeBtn = document.querySelector('.close');
+const botoesDescricao = document.querySelectorAll(".btn-descricao");
+const botoesValor = document.querySelectorAll(".btn-valor");
 
-relatedProductsBtn.addEventListener('click', () => {
-  relatedProductsModal.classList.add('active');
-});
+for (let i = 0; i < botoesDescricao.length; i++) {
+  botoesDescricao[i].addEventListener("click", function() {
+    const descricao = this.parentElement.querySelector(".descricao");
+    const valor = this.parentElement.querySelector(".valor");
+    if (valor.style.display === "block") {
+      valor.style.display = "none";
+    }
+    descricao.style.display = "block";
+  });
+}
 
-closeBtn.addEventListener('click', () => {
-  relatedProductsModal.classList.remove('active');
-});
+for (let i = 0; i < botoesValor.length; i++) {
+  botoesValor[i].addEventListener("click", function() {
+    const descricao = this.parentElement.querySelector(".descricao");
+    const valor = this.parentElement.querySelector(".valor");
+    if (descricao.style.display === "block") {
+      descricao.style.display = "none";
+    }
+    valor.style.display = "block";
+  });
+}
